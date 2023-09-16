@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<record id="estate_action" model="ir.actions.act_window">
+        <field name="name">Real Estate</field>
+        <field name="res_model">estate.table</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="type_action" model="ir.actions.act_window">
+        <field name="name">Property Type</field>
+        <field name="res_model">property.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="tag_action" model="ir.actions.act_window">
+        <field name="name">Property Tag</field>
+        <field name="res_model">property.tag</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="test_menu_root" name="Real Estate"/>
+    <menuitem id="test_first_level_menu" parent="test_menu_root" name="Advertisement"/>
+    <menuitem id="test_second_level_menu" parent="test_first_level_menu" action="estate_action" name="Properties"/>
+    <menuitem id="test_settings_level_menu" parent="test_menu_root" name="Settings"/>
+    <menuitem id="test_type_level_menu" parent="test_settings_level_menu" action="type_action" name="Property Type"/>
+    <menuitem id="test_tag_level_menu" parent="test_settings_level_menu" action="tag_action" name="Property Tag"/>
+
+
+</odoo>
